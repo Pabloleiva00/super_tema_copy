@@ -1,7 +1,7 @@
 
 const CACHE_NAME = 'v1_static_cache';
 
-const profileImagePaths = Array.from({ length: 20 }, (_, i) => `/profiles/user${i + 1}.jpg`);
+const profileImagePaths = Array.from({ length: 20 }, (_, i) => `/super_tema_copy/profiles/user${i + 1}.jpg`);
 
 const urlsToCache = [
   // HTML
