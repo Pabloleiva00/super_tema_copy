@@ -7,9 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "build:css": "npx tailwindcss -i ./src/styles/style.css -o ./public/css/style.css --minify"
+    "build:css": "npx tailwindcss -i ./src/styles/style.css -o ./public/css/style.css --minify",
+    "fix:html": "cp -r dist/html/* dist/",
+    "predeploy": "npm run build && npm run fix:html",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
