@@ -17,16 +17,15 @@ const urlsToCache = [
 
   // CSS
   '/super_tema_copy/css/style.css',
-  '/super_tema_copy/styles/style.css',
 
   // JS
-  '/super_tema_copy/js/auth.js',
-  '/super_tema_copy/js/call_detail.js',
-  '/super_tema_copy/js/load_navbar.js',
-  '/super_tema_copy/js/main_call.js',
-  '/super_tema_copy/js/profile.js',
-  '/super_tema_copy/js/call.js',
-  '/super_tema_copy/main.js',
+  //'/super_tema_copy/js/auth.js',
+  //'/super_tema_copy/js/call_detail.js',
+  //'/super_tema_copy/js/load_navbar.js',
+  //'/super_tema_copy/js/main_call.js',
+  //'/super_tema_copy/js/profile.js',
+  //'/super_tema_copy/js/call.js',
+  //'/super_tema_copy/main.js',
 
   '/super_tema_copy/manifest.json',
   '/super_tema_copy/web-app-manifest-192x192.png',
