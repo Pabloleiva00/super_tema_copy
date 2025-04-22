@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Call Detail</title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body class="bg-gradient-to-b from-white to-yellow-100 font-sans min-h-screen p-6">
+    <div class="max-w-md mx-auto space-y-6">
+      <!-- Sección con el ícono grande del otro usuario -->
+      <div class="flex justify-center">
+        <a id="otherUserLink" href="profile_public.html?userId=RECEIVER_ID" title="Ver perfil del otro usuario">
+          <img id="otherUserPic" src="/profiles/user1.jpg" alt="Other user" class="w-32 h-32 rounded-full shadow-lg hover:opacity-90 transition"/>
+        </a>
+      </div>
+
+      <h1 class="text-2xl font-bold text-center text-orange-800">Call Details</h1>
+      
+      <div class="bg-white rounded-lg p-6 shadow-lg">
+        <p>
+          <span class="font-medium text-orange-600">Caller:</span>
+          <span id="callerName" class="text-gray-800">Loading...</span>
+        </p>
+        <p>
+          <span class="font-medium text-orange-600">Receiver:</span>
+          <span id="receiverName" class="text-gray-800">Loading...</span>
+        </p>
+        <p>
+          <span class="font-medium text-orange-600">Start:</span>
+          <span id="startTime" class="text-gray-800">-</span>
+        </p>
+        <p>
+          <span class="font-medium text-orange-600">Finish:</span>
+          <span id="finishTime" class="text-gray-800">-</span>
+        </p>
+        <p>
+          <span class="font-medium text-orange-600">Duration:</span>
+          <span id="duration" class="text-gray-800">-</span>
+        </p>
+        <p>
+          <span class="font-medium text-orange-600">Status:</span>
+          <span id="status" class="text-gray-800">-</span>
+        </p>
+      </div>
+      
+      <a href="main.html" class="block text-center bg-orange-500 hover:bg-orange-600 p-3 rounded-md font-medium text-white transition">
+        Back to Calls
+      </a>
+    </div>
+
+    <div id="navbar-container"></div>
+    <script type="module" src="../js/call_detail.js"></script>
+  </body>
+</html>

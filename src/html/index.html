@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="manifest" href="/manifest.json" />
+    <!-- Usamos un tono naranja-terroso para el theme-color -->
+    <meta name="theme-color" content="#d35400" />
+    <link rel="icon" type="image/svg+xml" href="/icono.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VideoCall App</title>
+    <link rel="stylesheet" href="/css/style.css">
+    
+  </head>
+  <body class="flex items-center justify-center h-screen bg-gradient-to-b from-yellow-100 to-orange-100 font-sans">
+    <div class="w-full max-w-md bg-white p-8 rounded-2xl shadow-lg text-center">
+      <h1 class="text-4xl font-extrabold text-orange-800 mb-2">Bienvenido a VideoCall</h1>
+      <p class="text-lg text-gray-600 mb-6">Conecta, llama y comparte momentos en vivo</p>
+      <div class="space-y-4">
+        <a href="login.html" class="block w-full bg-orange-500 text-white py-3 rounded-2xl font-medium shadow-md hover:bg-orange-600 transition">Log in</a>
+        <a href="signup.html" class="block w-full bg-white border border-orange-300 text-orange-600 py-3 rounded-2xl font-medium shadow hover:bg-orange-50 transition">Sign up</a>
+      </div>
+    </div>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

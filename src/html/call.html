@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=deviimport '../css/style.css';
+    ce-width, initial-scale=1.0" />
+    <title>Video Call</title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body class="bg-gradient-to-b from-yellow-100 to-orange-100 font-sans relative min-h-screen text-gray-800">
+    <!-- Encabezado con usuario y duración -->
+    <header class="flex items-center justify-between p-4">
+      <div class="flex items-center space-x-3">
+        <!-- Foto de la persona con la que hablas -->
+        <img
+          id="profilePic"
+          src="/profiles/user1.jpg"
+          alt="User avatar"
+          class="w-12 h-12 rounded-full border-2 border-white shadow-md"
+        />
+        <div>
+          <!-- Nombre de la otra persona -->
+          <p id="callUsername" class="text-lg font-bold text-orange-800">Emily</p>
+          <!-- Tiempo o estado de la llamada -->
+          <p id="callDuration" class="text-sm text-gray-600">12:30</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Contenedor principal para los videos -->
+    <main class="flex-1 relative overflow-hidden">
+      <!-- Video remoto, ocupa casi todo el espacio disponible -->
+      <video
+        id="remoteVideo"
+        autoplay
+        playsinline
+        class="w-full h-full object-cover border-2 border-white rounded-lg shadow-md"
+      ></video>
+
+      <!-- Video local en miniatura, anclado en la esquina inferior derecha -->
+      <video
+        id="localVideo"
+        autoplay
+        playsinline
+        muted
+        class="w-48 h-30 object-cover border-2 border-white rounded-lg shadow-md absolute bottom-4 right-4"
+      ></video>
+    </main>
+
+    <!-- Controles de la llamada en la parte inferior -->
+    <footer class="flex items-center justify-center space-x-6 py-4 mb-20">
+      <!-- Micrófono -->
+      <button
+        id="toggleMic"
+        class="bg-orange-500 text-white p-3 rounded-full hover:bg-orange-600 transition flex items-center justify-center"
+      >
+        <span id="micIcon">🔊</span>
+      </button>
+      <!-- Botón para colgar -->
+      <button
+        id="endCall"
+        class="bg-red-600 text-white p-3 rounded-full hover:bg-red-500 transition flex items-center justify-center"
+      >
+        🔴
+      </button>
+      <!-- Cámara -->
+      <button
+        id="toggleCam"
+        class="bg-orange-500 text-white p-3 rounded-full hover:bg-orange-600 transition flex items-center justify-center"
+      >
+        <span id="camIcon">🎥</span>
+      </button>
+    </footer>
+
+    <!-- Script principal de la llamada -->
+    <script type="module" src="../js/call.js"></script>
+
+    <!-- Navbar inferior (si usas tu bottom navbar) -->
+    <div id="navbar-container"></div>
+  </body>
+</html>

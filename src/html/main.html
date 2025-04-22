@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main - VideoCall</title>
+    <link rel="manifest" href="/manifest.json" />
+    <!-- Incluimos TailwindCSS -->
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body class="bg-gradient-to-b from-white to-yellow-100 font-sans min-h-screen p-4 text-gray-800 overflow-y-auto">
+    <div class="max-w-md mx-auto">
+      <!-- Encabezado con botón para Nueva Llamada -->
+      <div class="flex items-center justify-between mb-4">
+        <h1 class="text-3xl font-bold text-orange-800">Llamadas</h1>
+        <button
+          id="createRoom"
+          class="bg-orange-500 text-white p-2 rounded-full hover:bg-orange-600 transition"
+          title="Nueva llamada"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 4v16m8-8H4" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Sección Favoritos -->
+      <h2 class="text-lg font-semibold text-orange-700 mb-1">Favoritos</h2>
+      <button class="flex items-center space-x-2 text-sm text-orange-500 mb-4 hover:underline" title="Añadir a favoritos">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.191 3.668a1 1 0 00.95.69h3.862c.967 0 
+            1.367 1.24.588 1.81l-3.127 2.27a1 1 0 00-.364 1.118l1.192 3.669c.3.922-.755 1.688-1.54 
+            1.118L10 14.348l-3.103 2.253c-.784.57-1.84-.196-1.54-1.118l1.192-3.669a1 1 0 
+            00-.364-1.118L3.058 9.095c-.779-.57-.379-1.81.588-1.81h3.862a1 1 0 
+            00.95-.69l1.191-3.668z" />
+        </svg>
+        <span>Añadir favorito</span>
+      </button>
+
+      <!-- Sección de información de la sala -->
+      <div id="roomInfo" class="bg-blue-100 text-blue-800 p-3 rounded shadow-md mb-4 hidden"></div>
+
+      <!-- Sección Recientes -->
+      <h2 class="text-lg font-semibold text-orange-700 mb-3">Recientes</h2>
+      <div id="callHistory" class="space-y-4 overflow-y-auto max-h-60 h-60 border border-gray-200 rounded p-2">
+        <!-- Aquí se inyectarán dinámicamente las tarjetas de llamadas -->
+      </div>
+    </div>
+
+    <!-- Modal para iniciar nueva llamada -->
+    <div id="callModal" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden z-50">
+      <div class="bg-white text-gray-800 rounded-lg p-6 w-full max-w-md shadow-lg">
+        <h2 class="text-xl font-semibold text-orange-700 mb-4">Start a New Call</h2>
+        <input
+          id="callSearchInput"
+          type="text"
+          placeholder="Search user..."
+          class="w-full p-2 mb-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400"
+        />
+        <div id="callSearchResults" class="space-y-1"></div>
+        <button
+          id="closeModal"
+          class="mt-4 w-full bg-gray-300 hover:bg-gray-400 p-2 rounded font-medium transition"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+
+    <!-- Se incluye el script que gestiona las llamadas y el modal -->
+    <script type="module" src="../js/main_call.js"></script>
+    <div id="navbar-container"></div>
+  </body>
+</html>
