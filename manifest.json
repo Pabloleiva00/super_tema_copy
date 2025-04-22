@@ -2,7 +2,7 @@
     "name": "VideoCall PWA",
     "short_name": "Call",
     "description": "Aplicación de videollamadas en línea",
-    "start_url": "/html/index.html",
+    "start_url": "/super_tema_copy/html/index.html",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#ffffff",
