@@ -16,7 +16,7 @@ const input = readdirSync(htmlDir).reduce((entries, file) => {
 export default defineConfig({
   root: 'src',
   publicDir: '../public',
-  base:'gttps://Pabloleiva00.github.io/super_tema_copy',
+  base:'https://Pabloleiva00.github.io/super_tema_copy',
   build: {
     outDir: '../dist',
     rollupOptions: {
