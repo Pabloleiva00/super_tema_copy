@@ -1,43 +1,40 @@
-const CACHE_NAME = 'v2_static_cache';
 
-// Obtener el path base dinámicamente (ej: '/super_tema_copy/')
-const BASE_PATH = self.location.pathname.split('/').slice(0, -1).join('/') + '/';
+const CACHE_NAME = 'v1_static_cache';
 
-const profileImagePaths = Array.from({ length: 20 }, (_, i) => `${BASE_PATH}profiles/user${i + 1}.jpg`);
+const profileImagePaths = Array.from({ length: 20 }, (_, i) => `/profiles/user${i + 1}.jpg`);
 
 const urlsToCache = [
   // HTML
-  'html/index.html',
-  'html/call_detail.html',
-  'html/call.html',
-  'html/login.html',
-  'html/main.html',
-  'html/navbar.html',
-  'html/profile_public.html',
-  'html/profile.html',
-  'html/signup.html',
+  '/super_tema_copy/html/index.html',
+  '/super_tema_copy/html/call_detail.html',
+  '/super_tema_copy/html/call.html',
+  '/super_tema_copy/html/login.html',
+  '/super_tema_copy/html/main.html',
+  '/super_tema_copy/html/navbar.html',
+  '/super_tema_copy/html/profile_public.html',
+  '/super_tema_copy/html/profile.html',
+  '/super_tema_copy/html/signup.html',
 
   // CSS
-  'css/style.css',
-  'styles/style.css',
+  '/css/style.css',
+  '/styles/style.css',
 
   // JS
-  'js/auth.js',
-  'js/call_detail.js',
-  'js/load_navbar.js',
-  'js/main_call.js',
-  'js/profile.js',
-  'js/call.js',
-  'main.js',
+  '/js/auth.js',
+  '/js/call_detail.js',
+  '/js/load_navbar.js',
+  '/js/main_call.js',
+  '/js/profile.js',
+  '/js/call.js',
+  '/main.js',
 
-  'manifest.json',
-  'web-app-manifest-192x192.png',
-  'web-app-manifest-512x512.png',
+  '/manifest.json',
+  '/web-app-manifest-192x192.png',
+  '/web-app-manifest-512x512.png',
 
   // Fotos de perfil
   ...profileImagePaths,
-].map(path => BASE_PATH + path);
-
+];
 
 // Evento de instalación: se cachean los archivos esenciales
 self.addEventListener('install', (event) => {
