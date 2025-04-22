@@ -16,21 +16,21 @@ const urlsToCache = [
   '/super_tema_copy/html/signup.html',
 
   // CSS
-  '/css/style.css',
-  '/styles/style.css',
+  '/super_tema_copy/css/style.css',
+  '/super_tema_copy/styles/style.css',
 
   // JS
-  '/js/auth.js',
-  '/js/call_detail.js',
-  '/js/load_navbar.js',
-  '/js/main_call.js',
-  '/js/profile.js',
-  '/js/call.js',
-  '/main.js',
+  '/super_tema_copy/js/auth.js',
+  '/super_tema_copy/js/call_detail.js',
+  '/super_tema_copy/js/load_navbar.js',
+  '/super_tema_copy/js/main_call.js',
+  '/super_tema_copy/js/profile.js',
+  '/super_tema_copy/js/call.js',
+  '/super_tema_copy/main.js',
 
-  '/manifest.json',
-  '/web-app-manifest-192x192.png',
-  '/web-app-manifest-512x512.png',
+  '/super_tema_copy/manifest.json',
+  '/super_tema_copy/web-app-manifest-192x192.png',
+  '/super_tema_copy/web-app-manifest-512x512.png',
 
   // Fotos de perfil
   ...profileImagePaths,
