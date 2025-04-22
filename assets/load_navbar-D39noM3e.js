@@ -1,0 +1,1 @@
+async function r(){const n=document.getElementById("navbar-container");if(n)try{const a=await(await fetch("../html/navbar.html")).text();n.innerHTML=a}catch(t){console.error("Error loading navbar:",t)}}export{r as l};
